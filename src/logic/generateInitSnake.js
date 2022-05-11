@@ -1,3 +1,5 @@
+// define init item here:
+// it must have some coords
 export default function generateInitSnake() {
 	const initSnake = {
 		head: { x: 2, y: 0 },

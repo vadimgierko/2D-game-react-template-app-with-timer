@@ -8,13 +8,19 @@ export default function Board({ board, score }) {
 							<td
 								className={
 									cell.body
-										? "board-cell body-cell"
+										? "body-cell"
 										: cell.food
-										? "board-cell food-cell"
+										? "food-cell"
 										: cell.head
-										? "board-cell head-cell"
-										: "board-cell"
+										? "head-cell"
+										: ""
 								}
+								style={{
+									// the board square cell will be sized automatically
+									// according to the number of rows & columns:
+									width: `${100 / row.length}%`,
+									height: `${100 / board.length}%`,
+								}}
 								key={"col-" + c}
 							>
 								{cell.food && score + 1}

@@ -1,5 +1,3 @@
-import generateInitState from "../logic/generateInitState";
-
 export default function reducer(state, action) {
 	switch (action.type) {
 		case "update-state":
@@ -23,8 +21,9 @@ export default function reducer(state, action) {
 				end: true,
 			};
 		case "reset-game":
-			const resetState = generateInitState();
-			return resetState;
+			return {
+				...action.payload.initState,
+			};
 		default:
 			return state;
 	}

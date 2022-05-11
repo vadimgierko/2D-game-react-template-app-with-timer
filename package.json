@@ -1,8 +1,8 @@
 {
-  "name": "snake-game-react",
+  "name": "2d-game-react-template-app-with-timer",
   "author": "Vadim Gierko",
   "version": "0.1.0",
-  "homepage": "https://vadimgierko.github.io/snake-game-react",
+  "homepage": "https://vadimgierko.github.io/2D-game-react-template-app-with-timer",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",

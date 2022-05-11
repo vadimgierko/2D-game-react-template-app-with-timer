@@ -1,18 +1,16 @@
-export default function generateEmptyBoard(size = 10) {
-	// check if size of the board is ok:
-	if (size < 10) {
-		alert(
-			"The board of size: " +
-				size +
-				" will be to small... Pass bigger board size!"
-		);
-		return;
-	}
-	// create empty board:
+export default function generateEmptyBoard(colNum, rowNum) {
+	// create empty board according to the passed columns & rows number:
 	let board = [];
-	for (let r = 0; r < size; r++) {
+	for (let r = 0; r < rowNum; r++) {
 		board[r] = [];
-		for (let c = 0; c < size; c++) {
+		for (let c = 0; c < colNum; c++) {
+			// define value of the empty cell
+			// it can be a string or an object with properties, like:
+			// board[r][c] = {
+			//   body: false,
+			//   food: false,
+			//   head: false
+			// };
 			board[r][c] = {
 				body: false,
 				food: false,

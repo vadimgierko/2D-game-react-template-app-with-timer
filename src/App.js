@@ -1,3 +1,5 @@
+// import any styles here:
+import "./index.css";
 // import react hooks here:
 import { useCallback, useEffect, useReducer, useState } from "react";
 // import layout components here:
@@ -18,15 +20,18 @@ import generateInitState from "./logic/generateInitState";
 import generateMove from "./logic/generateMove";
 
 const DIR_KEYS = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp"];
-const INIT_STATE = generateInitState();
+// define board size here:
+const BOARD_SIZE = { colNum: 10, rowNum: 10 };
+const INIT_STATE = generateInitState(BOARD_SIZE.colNum, BOARD_SIZE.rowNum);
 
 export default function App() {
 	const [state, dispatch] = useReducer(reducer, INIT_STATE);
 	const [speed, setSpeed] = useState(500); // 1000 = 1 second // 1000 should be dividable by speed
 	const [timer, setTimer] = useState(0); // makeMove() is binded to timer changes
-	const [dir, setDir] = useState("ArrowRight"); // direction of the move
+	const [dir, setDir] = useState("ArrowRight"); // the very initial move direction, when the game starts
 	const [isTouchScreen, setTouchScreen] = useState(false);
 
+	// this function is bonded to a timer & run logic defined in "logic" folder
 	const makeMove = useCallback(
 		(tick) => {
 			const updatedState = generateMove(state, dir);
@@ -38,12 +43,14 @@ export default function App() {
 		[state, dir]
 	);
 
+	// define your keyDown handling logic inside this function:
 	const handleKeyDown = useCallback(
 		(e) => {
 			const key = e.code;
+			// define your keyDown handling logic here:
 			if (key === "Space" || key === "Enter") {
 				if (state.end) {
-					dispatch({ type: "reset-game" });
+					dispatch({ type: "reset-game", payload: { initState: INIT_STATE } });
 					setDir("ArrowRight");
 				} else {
 					if (state.start) {
@@ -73,6 +80,7 @@ export default function App() {
 	// end / lose game screen / alert
 	useEffect(() => {
 		if (state.end) {
+			// adapt the message to your key down handling logic:
 			alert(
 				"You lose... To play again press space key or restart button or refresh the browser!"
 			);
@@ -97,7 +105,6 @@ export default function App() {
 	// listen to keys pressed:
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeyDown);
-		//cleanup this component
 		return () => {
 			window.removeEventListener("keydown", handleKeyDown);
 		};

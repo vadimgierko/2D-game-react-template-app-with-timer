@@ -1,3 +1,4 @@
+// calculate some item move here:
 export default function generateSnakeMove(prevSnake, dir, eatenFood) {
 	// calculate move in given direction:
 	let move = {};

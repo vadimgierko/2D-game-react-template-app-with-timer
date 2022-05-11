@@ -1,8 +1,8 @@
 import generateEmptyBoard from "./generateEmptyBoard";
 
-export default function generateInitBoard(snake, food, size = 10) {
+export default function generateInitBoard(snake, food, colNum, rowNum) {
 	// create empty board:
-	let board = generateEmptyBoard(size);
+	let board = generateEmptyBoard(colNum, rowNum);
 	// draw a snake into the board:
 	const head = snake.head;
 	board[head.y][head.x] = {
