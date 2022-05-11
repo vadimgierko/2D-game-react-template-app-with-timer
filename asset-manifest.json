@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/2D-game-react-template-app-with-timer/static/css/main.0f63035c.css",
+    "main.js": "/2D-game-react-template-app-with-timer/static/js/main.a816a126.js",
+    "static/js/787.266e97cf.chunk.js": "/2D-game-react-template-app-with-timer/static/js/787.266e97cf.chunk.js",
+    "index.html": "/2D-game-react-template-app-with-timer/index.html",
+    "main.0f63035c.css.map": "/2D-game-react-template-app-with-timer/static/css/main.0f63035c.css.map",
+    "main.a816a126.js.map": "/2D-game-react-template-app-with-timer/static/js/main.a816a126.js.map",
+    "787.266e97cf.chunk.js.map": "/2D-game-react-template-app-with-timer/static/js/787.266e97cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f63035c.css",
+    "static/js/main.a816a126.js"
+  ]
+}
