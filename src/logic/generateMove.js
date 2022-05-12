@@ -3,8 +3,8 @@ import generateSnakeMove from "./generateSnakeMove";
 import generateFood from "./generateFood";
 
 export default function generateMove(state, dir) {
-	const colNum = state.colNum;
-	const rowNum = state.rowNum;
+	const colNum = state.boardSize.colNum;
+	const rowNum = state.boardSize.rowNum;
 	let updatedState = { ...state };
 
 	// define your move logic here:

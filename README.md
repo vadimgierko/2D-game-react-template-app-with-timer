@@ -2,10 +2,11 @@
 
 This template let you start developing a game with pre-built common layout and game components & game loop bonded to the customizable timer.
 
-This template app was developed as a "side effect" of my snake game clone project. Youc can play the game [here](https://vadimgierko.github.io/snake-game-react/) & see how this template works in practice!
+This template app was developed as a "side effect" of my snake game clone project. You can play the game [here](https://vadimgierko.github.io/snake-game-react/) & see how this template works in practice!
 
 CodeSandbox demo: https://codesandbox.io/s/2d-game-starter-template-with-built-in-timer-t96xxt
-Source code on GitHub: https://github.com/vadimgierko/snake-game-react
+
+Source code on GitHub: https://github.com/vadimgierko/2D-game-react-template-app-with-timer
 
 ## What's included in this template game app
 
@@ -51,6 +52,7 @@ The main component <App/> contains all pre-built functions & UI you need for fas
 - end game alert.
 
 Follow comments in <App /> & don't change too much ;-)
+
 "Logic" folder, reducer & "components" folder is the place, where you can implement unique logic for your game.
 
 ## Stack

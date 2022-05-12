@@ -11,11 +11,11 @@ export const LAYOUT_DATA = {
 			},
 			{
 				label: "</>",
-				link: "https://github.com/vadimgierko/snake-game-react", // input link to GitHub repository here
+				link: "https://github.com/vadimgierko/2D-game-react-template-app-with-timer", // input link to GitHub repository here
 			},
 			{
 				label: "CodeSandbox",
-				link: "https://codesandbox.io/s/snake-game-react-qreqki", // input link to CodeSandbox demo here
+				link: "https://codesandbox.io/s/2d-game-starter-template-with-built-in-timer-t96xxt", // input link to CodeSandbox demo here
 			},
 		],
 	},
